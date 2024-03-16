@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# compiled output
+dist/
+cdk.out/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+coverage/
+coverage_integration/
+npm-debug.log
+yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# rc
+.yarnrc
+.npmrc

@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "baseUrl": "./src",
+      "outDir": "./dist",
+      "declaration": true,
+      "resolveJsonModule": true,
+      "sourceMap": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "forceConsistentCasingInFileNames": true,
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "strict": true,
+      "skipLibCheck": true,
+      "skipDefaultLibCheck": true,
+      "strictPropertyInitialization": false,
+      "types": ["jest", "node"],
+      "lib": ["esnext", "DOM"]
+    },
+    "watchOptions": {
+      // Use native file system events for files and directories
+      "watchFile": "useFsEvents",
+      "watchDirectory": "useFsEvents",
+      // Poll files for updates more frequently
+      // when they're updated a lot.
+      "fallbackPolling": "dynamicPriority",
+      // Don't coalesce watch notification
+      "synchronousWatchDirectory": true,
+      // Finally, two additional settings for reducing the amount of possible
+      // files to track  work from these directories
+      "excludeDirectories": ["**/node_modules", "_build"]
+    },
+    "include": [
+      "src/**/*",
+      "infra/**/*",
+    ],
+    "exclude": ["src/__mocks__/**/*", "src/**/*.spec.ts", "src/**/*.test.ts"],
+    "ts-node": {
+      "require": [
+        "tsconfig-paths/register"
+      ],
+      "compilerOptions": {
+        "target": "es2020",
+        "module": "commonjs"
+      }
+    }
+  }
